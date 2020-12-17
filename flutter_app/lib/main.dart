@@ -1,28 +1,22 @@
-import 'package:english_words/english_words.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:flutter_app/randomWord.dart';
+import 'package:flutter_app/login//login.dart';
 
 
-void main() => runApp(MyApp());
+void main() => runApp(App());
 
-class MyApp extends StatelessWidget{
-
+class App extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return MaterialApp(
-      title: "My first flutter demo",
-      theme: new ThemeData(
-        primaryColor: Colors.white,
+    // TODO: implement build
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      home:Scaffold(
-        body: Center(
-          child: RandomWords(),
-        ),
-      ),
+      home: Login(),
     );
   }
-
-
 }
-
